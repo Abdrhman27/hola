@@ -1642,7 +1642,7 @@ input[type="email"]:focus{
     background-color: var(--main-alternate-color);
 }
 /* Footer */
-.footer{
+body > .footer{
     padding-top: var(--main-sec-padding);
     background-color: #191919;
     position: relative;
