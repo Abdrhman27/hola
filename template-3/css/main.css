@@ -1647,9 +1647,9 @@ input[type="email"]:focus{
 }
 .disscount > .form .content form > textarea{
     resize: none;
+    outline: none;
 }
-.disscount > .form .content form > input:focus,
-.disscount > .form .container form > textarea:focus{
+.disscount > .form .content form > input:focus{
     outline: none !important;
 }
 .disscount > .form .content form > button[type="submit"]{
