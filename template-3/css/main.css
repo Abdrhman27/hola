@@ -38,6 +38,13 @@ a{
     margin-right: auto;
 }
 /* Media */
+@media (max-width: 350px){
+    .main-title::before,.main-title::after{
+        display: none !important;
+    }.main-title{
+        animation-delay: 0ms !important;
+    }
+}
 @media (max-width: 767.9px){
     .header > .container > .logo{
         width: 100%;
