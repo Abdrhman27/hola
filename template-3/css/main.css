@@ -88,7 +88,7 @@ a{
         -moz-transform: translateY(-50%) !important;
         -ms-transform: translateY(-50%) !important;
         -o-transform: translateY(-50%) !important;
-    }.disscount > .content .text{
+}.disscount > .content .text{
         flex-basis: 100% !important;
     }.disscount > .form .content h2{
         font-size: 32px !important;
