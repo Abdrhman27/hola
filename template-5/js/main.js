@@ -123,11 +123,20 @@ randmoizeImgs();
 
 // Start Header Links
 const toggleMenu = document.querySelector(".landing .links-container .toggle-menu");
+const headLinks = document.querySelector(".landing .links");
 toggleMenu.onclick = (e) => {
+    e.stopPropagation();
     document.querySelector(".landing .links").classList.toggle("open");
     toggleMenu.classList.toggle("active");
 }
-
+document.addEventListener("click", (e) => {
+    if(e.target !== toggleMenu && e.target !== headLinks){
+        if(headLinks.classList.contains("open")){
+            headLinks.classList.remove("open");
+            toggleMenu.classList.remove("active");
+        }
+    }
+});
 // Skills Section
 let ourSkills = document.querySelector(".skills");
 
@@ -195,5 +204,3 @@ function handleActive(e) {
     });
     e.target.classList.add("active");
 };
-
-
