@@ -1068,11 +1068,17 @@ a{
 }
 .skills .container .box .preload span{
     display: block;
+    width: 0%;
     height: 100%;
-    background-color: var(--main-color);   
+    background-color: var(--main-color);
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
 }
 .skills .container .box .preload span::before{
-    content: attr(status);
+    content: attr(data-status);
     color: var(--main-color);
     font-weight: 700;
     font-size: 14px;

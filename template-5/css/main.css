@@ -125,6 +125,9 @@ a{
 .c-main{
     color: var(--main-color);
 }
+.us-none{
+    user-select: none;
+}
 .clearfix{
     clear: both;
 }
