@@ -1,0 +1,15 @@
+.app-container{
+    gap: 2.5rem;
+    .app-data{
+        text-align: center;
+        .app-description{
+            margin-bottom: var(--mb-1-5, 1.5rem);
+        }
+        .app-buttons{
+            display: grid;
+            grid-template-columns: repeat(2,max-content);
+            justify-content: center;
+            gap: .5rem;
+        }
+    }
+}

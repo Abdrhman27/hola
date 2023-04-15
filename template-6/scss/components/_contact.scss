@@ -1,0 +1,17 @@
+.contact{
+    .contact-container{
+        padding-bottom: 3rem;
+    }
+    .contact-content{
+        row-gap: .75rem;
+    }
+    .contact-item{
+        font-size: var(--small-font-size,.813rem);
+        font-weight: var(--semi-bold,600);
+        color: var(--title-color,#000);
+        .contact-info{
+            font-weight: initial;
+            color: var(--text-color,#a9a8a2);
+        }
+    }
+}

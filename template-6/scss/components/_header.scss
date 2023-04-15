@@ -1,0 +1,90 @@
+.header{
+    width: 100%;
+    background-color: var(--body-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    @include x-transition(500ms);
+    &.scroll-header{
+        @include x-box-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
+    }
+    .nav{
+        height: var(--header-height,3rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-menu{
+            &.open{
+                top: calc(var(--header-height,3rem) + 1rem);
+            }
+            @media screen and (max-width: 767px){
+                width: 90%;
+                background-color: var(--container-color);
+                padding: 2.5rem 0;
+                position: fixed;
+                top: -100%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                @include x-border-radius(2rem);
+                @include x-box-shadow(0 0 4px rgba(0,0,0,.1));
+                @include x-transition(0.5s);
+                z-index: var(--z-fixed);
+            }
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1.5rem;
+            i{
+                font-size: var(--mb-1-5);
+                cursor: pointer;
+            }
+            .change-theme{
+                color: var(--title-color);
+                font-size: 1.75rem;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+            .nav-link{
+                position: relative;
+            }
+            .nav-link.active-link::before{
+                content: "";
+                position: absolute;
+                bottom: -.75rem;
+                left: 45%;
+                width: 5px;
+                height: 5px;
+                background-color: var(--title-color,#000);
+                @include x-border-radius(50%);
+            }
+        }
+        @media screen and (min-width: 768px) {
+            &{
+                height: calc(var(--header-height,3rem) + 1.5rem);
+            }
+            .toggle-menu{
+                display: none;
+            }.nav-list{
+                flex-direction: row;
+                column-gap: 2.5rem;
+            }.change-theme{
+                position: initial !important;
+            }
+        }
+    }
+    .nav-logo,.nav-link,
+    .toggle-menu{
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+    }
+    .toggle-menu{
+        font-size: 1.3rem;
+        cursor: pointer;
+        @include x-user-select;
+    }
+}

@@ -1,0 +1,142 @@
+/*! sass-mixins - v0.13.0 - 2020-03-30 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --header-height: 3rem;
+  --hue: 45;
+  --sat: 98%;
+  --main-color: hsl(var(--hue),var(--sat),60%);
+  --main-color-light: hsl(var(--hue),var(--sat),85%);
+  --main-color-lighten: hsl(var(--hue),var(--sat),80%);
+  --main-color-alt: hsl(var(--hue),var(--sat),53%);
+  --title-color: hsl(var(--hue),4%,15%);
+  --text-color: hsl(var(--hue),4%,35%);
+  --text-color-light: hsl(var(--hue),4%,65%);
+  --body-color: hsl(var(--hue),0%,100%);
+  --scroll-bar-color: hsl(var(--hue),4%,85%);
+  --scroll-bar-thumb: hsl(var(--hue),4%,75%);
+  --container-color: #FFF;
+  /* Fonts */
+  --body-font: "Poppins",sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /* Managers */
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height, 3rem) 0 0 0;
+  font-family: var(--body-font, "Poppins", sans-serif);
+  font-size: var(--normal-font-size, 0.938rem);
+  background-color: var(--body-color, #FFF);
+  color: var(--text-color, #5d5b56);
+}
+
+h1, h2, h3 {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section {
+  padding: 4.5rem 0 1rem 0;
+}
+.section .title, .section .title-center {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--mb-1);
+}
+
+.svg .svg-color {
+  fill: var(--main-color);
+}
+.svg .svg-blob {
+  fill: var(--main-color-light);
+}
+.svg .svg-img {
+  width: 300px;
+  justify-self: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .nav-links {
+  display: inline-block;
+}

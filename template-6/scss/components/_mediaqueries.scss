@@ -1,0 +1,49 @@
+@media screen and (min-width: 576px){
+    .home-container,.about-container,
+    .security-container,.app-container,
+    .contact-container,.footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .home-container,.about-container,
+    .security-container,.app-container,
+    .contact-container{
+        align-items: center;
+    }
+    .about-container{
+        column-gap: 6rem;
+    }
+    .about-data,.security-data,
+    .app-data,.contact-description{
+        text-align: initial !important;
+    }
+    .app-data .app-buttons{
+        justify-content: initial !important;
+    }
+    .app-container .app-img{
+        order: -1;
+    }
+    .services-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media  screen and (min-width: 992px) {
+    .services-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .contact-container{
+        grid-template-columns: 3fr 1.5fr 1.25fr;
+    }
+    .footer-container{
+        grid-template-columns: repeat(5,1fr);
+        column-gap: 3rem;
+    }
+    .about-container,.security-container,
+    .app-container,.contact-container{
+        column-gap: 6rem;
+    }
+    .home-container{
+        .home-img{
+        width: 540px;
+        }
+    }
+}

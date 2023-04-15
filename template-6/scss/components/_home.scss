@@ -1,0 +1,28 @@
+@media screen and (min-width: 767px){
+    .home .home-container{
+    padding: 6rem 0 2rem;
+    }
+    body{
+        margin: 0;
+    }
+}
+.home{
+    .home-container{
+        row-gap: 3rem;
+        @media screen and (min-width: 576px) {
+            .home-img{
+                order: 1;
+            }.home-description{
+                padding-right: 6rem;
+            }
+        }
+    }
+    .home-title{
+        font-size: var(--biggest-font-size);
+        font-weight: var(--font-bold);
+        margin-bottom: var(--mb-0-75);
+    }
+    .home-description{
+        margin-bottom: var(--mb-2);
+    }
+}
