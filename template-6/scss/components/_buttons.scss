@@ -59,3 +59,15 @@
 .scroll-bt.show{
     bottom: 60px;
 }
+::-webkit-scrollbar{
+    width: .6rem;
+    @include x-border-radius(.5rem);
+    background-color: var(--scroll-bar-color);
+    &-thumb{
+        background-color: var(--scroll-bar-thumb);
+        @include x-border-radius(.5rem);
+        &:hover{
+            background-color: var(--text-color-light);
+        }
+    }
+}

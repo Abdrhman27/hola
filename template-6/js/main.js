@@ -3,12 +3,35 @@ const navMenu = document.getElementById("nav-menu");
 const header = document.getElementById("header");
 const home = document.getElementById("home");
 const scrollBt = document.getElementById("scroll-bt");
+const theme = document.getElementById("theme-bt"),
+darkTheme = "dark-theme",iconTheme = "bx-toggle-right";
 const navLinks = document.querySelectorAll(".nav-menu .nav-link");
-const themeIcon = document.querySelector(".header .nav-list i");
 const sections = document.querySelectorAll("section[id]");
+const themeStg = window.localStorage.getItem("theme_option");
+if(themeStg != null){
+    if(themeStg == "light-theme"){
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add(themeStg);
+    }else{
+        document.body.classList.remove("light-theme");
+        document.body.classList.add(themeStg);
+    }
+}
+// Local Storage
 toggleMenu.onclick = () => toggleS(navMenu,"open");
 navLinks.forEach(e => e.addEventListener("click",removeS(navMenu,"open")));
-themeIcon.onclick = (e) => toggleS(e,"bx-toggle-right");
+theme.onclick = (e) => {
+    if(!document.body.classList.contains("dark-theme")){
+        window.localStorage.setItem("theme_option","dark-theme");
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme")
+    }else{
+        window.localStorage.setItem("theme_option","light-theme");
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme")
+    }
+    toggleS(e.target,"bx-toggle-right");
+};
 window.onscroll = () => {
     if(window.scrollY > home.offsetHeight + 100 ){
         document.getElementById("scroll-bt").classList.add("show");

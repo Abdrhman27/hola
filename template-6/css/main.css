@@ -321,6 +321,21 @@ img {
   bottom: 60px;
 }
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--scroll-bar-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-thumb);
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
 @media screen and (min-width: 767px) {
   .home .home-container {
     padding: 6rem 0 2rem;
@@ -454,6 +469,20 @@ img {
   font-size: var(--small-font-size);
   color: var(--text-color);
   text-align: center;
+}
+
+body.dark-theme {
+  --main-color-light: hsl(var(--hue), var(--sat), 75%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 80%);
+  --body-color: hsl(var(--hue), 8%, 13%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+  --scroll-bar-color: hsl(var(--hue), 4%, 32%);
+  --scroll-bar-thumb: hsl(var(--hue), 4%, 24%);
+}
+
+.dark-theme .footer {
+  background-color: var(--container-color);
 }
 
 @media screen and (min-width: 576px) {
