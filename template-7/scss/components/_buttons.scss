@@ -1,0 +1,15 @@
+.button{
+    display: inline-block;
+    padding: .875rem 2.1875rem;
+    @include x-border-radius(50px);
+    background: linear-gradient(90deg,var(--lime-green),var(--bright-cyan));
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    color: #FFF;
+    opacity: 1;
+    cursor: pointer;
+    @include x-transition(.3s ease-out);
+    &:hover{
+        opacity: .65;
+    }
+}

@@ -1,0 +1,49 @@
+.flex{
+    display: flex;
+    &-ac{
+        display: flex;
+        align-items: center;
+    }
+    &-jb{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-ac-jb{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section{
+    padding-top: var(--sec-tp-pd);
+    padding-bottom: var(--sec-bt-pd);
+}
+.grid{
+    display: grid;
+    gap: 2rem 1.25rem;
+}
+.d-block{
+    display: block;
+}
+.hide-mobile{
+    @include breakpoint-down(medium){
+        display: none !important;
+    }
+}
+.hide-desktop{
+    @include breakpoint-up(large){
+        display: none !important;
+    }
+}

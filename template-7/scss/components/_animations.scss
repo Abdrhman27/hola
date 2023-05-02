@@ -1,0 +1,36 @@
+@include x-keyframes(fade-in){
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.fade-in{
+    @include x-animation(fade-in .2s ease-in-out forwards);
+}
+
+@include x-keyframes(fade-out){
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.fade-out{
+    @include x-animation(fade-out .2s ease-in-out forwards);
+}

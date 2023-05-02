@@ -1,0 +1,87 @@
+.footer{
+    background-color: #2d314d;
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+    @include breakpoint-up(large){
+        .footer-container{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 3fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+            "logo links1 links2 request"
+            "social links1 links2 copyright";
+            gap: 1rem;
+            justify-items: start;
+        }
+        .footer-social{
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        .footer-button{
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        .footer-links{
+            text-align: start !important;
+        }
+    }
+    @include breakpoint-down(medium){
+        .footer-links a{
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .footer-social{
+        grid-area: social;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
+        a:hover{
+            path{
+                fill: #00609b;
+            }
+        }
+        a:nth-last-of-type(n+2){
+            margin-right: 1rem;
+        }
+        path{
+            @include x-transition(300ms);
+        }
+    }
+    .footer-links{
+        a{
+            display: block;
+            color: #FFF;
+            font-size: 1rem;
+            line-height: 2.2;
+            @include x-transition(300ms);
+            &:hover{
+                color: hsl(120, 100%, 42%);
+            }
+        }
+    }
+    .links1{
+        grid-area: links1;
+    }
+    .links2{
+        grid-area: links2;
+    }
+    .footer-button{
+        grid-area: request;
+        justify-self: end;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
+    }
+    .footer-copyright{
+        grid-area: copyright;
+        align-self: end;
+        justify-self: end;
+        font-size: var(--font-size-sm);
+        color: #9698a6;
+    }
+    .footer-caption{
+        margin-top: 4rem;
+        font-size: var(--font-size-sm);
+    }
+}

@@ -1,0 +1,32 @@
+.featuers{
+    background-color: #EEE;
+    h2.title{
+        color: var(--dark-blue);
+        font-weight: 300;
+        font-size: var(--font-size-lg);
+        margin-bottom: 1.25rem;
+    }
+    .description{
+        color: var(--grayish-blue);
+        line-height: 1.8;
+    }
+    .feat-cont{
+        margin-top: 4rem;
+        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+        .feat{
+            img,.feat-title{
+                margin-bottom: 1.3rem;
+            }
+            .feat-title{
+                color: var(--dark-blue);
+                font-weight: 300;
+                font-size: var(--font-size-reg);
+            }
+            .feat-des{
+                color: var(--grayish-blue);
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}

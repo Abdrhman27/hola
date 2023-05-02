@@ -1,0 +1,25 @@
+:root{
+    --header-height: 5.0125rem;
+    --header-height-mobile: 3.5rem;
+    --body-font: "Public Sans",sans-serif;
+    --body-font-weight: 300;
+    --body-color: #FFF;
+    --font-size-main: 1.125rem;
+    --font-size-xlg: 3.125rem;
+    --font-size-lg: 2.5rem;
+    --font-size-xmd: 1.875rem; 
+    --font-size-md: 1.45rem;
+    --font-size-xsm: 1.25rem;
+    --font-size-sm: .875rem;
+    --font-size-reg: 1.75rem;
+    --sec-tp-pd: 5rem;
+    --sec-bt-pd: 5rem;
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --lime-cyan-gradient: linear-gradient(90deg,var(--lime-green),var(--bright-cyan));
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
